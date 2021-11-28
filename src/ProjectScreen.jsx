@@ -1,34 +1,65 @@
+import { useState } from "react";
 import projectData from "./data"
 import ProjectCard from "./ProjectCard"
 
-var domainToSearch = "Web Development";
+
+
+function filterProjects(tagToSearch){
+
+    if(tagToSearch.toLowerCase() === "all"){
+        return projectData;
+    }
+
+    var filteredSet = [];
+    for(var i=0 ; i< projectData.length; i++){
+        if(projectData[i].tag.includes(tagToSearch.toLowerCase())){
+            filteredSet.push(projectData[i]);
+        }
+    }
+
+    return filteredSet;
+}
+
 
 export default function ProjectScreen() {
+
+    const [emptyFlag, setEmptyFlag] = useState(false);
+    const [tagToSearch, setTagToSearch] = useState("All");
+    const [filteredProj, setFilteredProj] = useState(projectData);
+
+    function handleChange(e){
+        console.log(e.target.value);
+        console.log("bfore:"+tagToSearch);
+        setTagToSearch(e.target.value);
+        console.log("after:"+tagToSearch);
+    }
+    function submitFilterReq(){
+        console.log("final:" + tagToSearch);
+        console.log(filterProjects(tagToSearch));
+        if(!filterProjects(tagToSearch).length){
+            setEmptyFlag(true);
+        }else{
+            setEmptyFlag(false);
+        }
+        setFilteredProj(filterProjects(tagToSearch));
+    }
+
     return (
         <div>
             Project Screen behold!
 
-<form action="post">
-    <input type="text" placeholder="Enter domain"/>
-    <button type="submit">Search</button>
-</form>
 
-        {projectData.map((curP) => {
-            return <div>
+    <input type="text" onChange = {handleChange} placeholder="Enter Tools/TechStack Tag"/>
 
+    <button onClick = {submitFilterReq}>Search</button>
 
-    {(curP.domain == domainToSearch) ? 
-           ( <div>
-                <ProjectCard project = {curP} domain = {domainToSearch}/>
-            </div>): <div></div>}
-        
+{emptyFlag? <div>No matching project. :( </div> : <div>{filteredProj.map((curP) => {
 
-        </div>
+return <ProjectCard project = {curP}/>;
 
-
-        })
-        }
-
+})
+} </div>
+}
         </div>
     )
 }
