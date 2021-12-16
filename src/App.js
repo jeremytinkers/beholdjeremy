@@ -1,4 +1,4 @@
-import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route,Routes, Link } from 'react-router-dom';
 import './App.css';
 import HomeScreen from './HomeScreen.jsx';
 import ProjectScreen from './ProjectScreen';
@@ -9,8 +9,7 @@ function App() {
     <div id="navParent">
             <div id="navbar">
 
-            <h1>Jeremiah Thomas </h1>
-         
+            <h1> <a href="/">Jeremiah Thomas</a> </h1>
 
             <nav>
                 <a href={"/projectDashboard"}>Projects</a>
@@ -23,8 +22,11 @@ function App() {
 
             </div>
     <Routes>
+    
+    <Route path="/projectDashboard/:tag"  element={<ProjectScreen/>} ></Route>
     <Route path="/projectDashboard"  element={<ProjectScreen/>} ></Route>
     <Route  path="/" element={<HomeScreen/>} ></Route>
+
     </Routes>
 
 

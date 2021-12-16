@@ -29,7 +29,9 @@ function latestTool(){
 }  
 
 
-export default function ProjectScreen() {
+export default function ProjectScreen(props) {
+
+    console.log("match params: " + props.match.params.id);
 
     const [emptyFlag, setEmptyFlag] = useState(false);
     const [tagToSearch, setTagToSearch] = useState("All");
