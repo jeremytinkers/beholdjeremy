@@ -2,7 +2,7 @@
   background-color: lightgoldenrodyellow;
   border-style: solid;
   border-width: 2px;
-  margin: 2rem;
+  margin: 2em;
   width: 50vh;
   border-radius: 0.8rem;
 
@@ -108,3 +108,37 @@ color: black;
   border-color: black;
   /* transform: translateY(-0.2em); */
 }
+
+#mainProjectContent{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+
+#projectsGrid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+@media (max-width:1060px) {
+  
+  #projectsGrid{
+grid-template-columns: auto auto;
+  }
+}
+@media (max-width:700px) {
+  
+  #projectsGrid{
+grid-template-columns: auto;
+  }
+}
+#projectsGridParent{
+  display: flex;
+  justify-content: center;
+  
+}
+
+

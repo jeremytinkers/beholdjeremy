@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import img from './assets/images/home1.jpg';
+import img from '../assets/images/home1.jpg';
 
 export default function HomeScreen(props) {
     let navigate = useNavigate();

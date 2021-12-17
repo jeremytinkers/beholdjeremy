@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import projectData from "./data"
-import ProjectCard from "./ProjectCard"
+import projectData from "../data.js"
+import ProjectCard from "../components/ProjectCard.js"
 
 function filterProjects(tagToSearch){
 
@@ -59,33 +59,50 @@ export default function ProjectScreen(props) {
     }
 
     var latestToolArr = latestTool();
-    console.log("cL:" + latestToolArr);
     
+
     return (
-        <div>
-   
-        <div>
-        <h2>Currently Playing around with: </h2>
-    {
-        latestToolArr.map((curLT)=>{
-            return <li>{curLT}</li>
-        })
-    }
-</div>
+    
+<div>
+<div id="mainProjectContent">
 
     <input type="text" onChange = {handleChange} placeholder="Enter Tools/TechStack Tag" value= {tagToSearch}/>
 
     <button onClick = {submitFilterReq}>Search</button>
 
-{emptyFlag? <div>No matching project. :( </div> : <div>{filteredProj.map((curP) => {
+   
+<div id="projectsGridParent">
+{emptyFlag? 
+<p>No matching project. :( </p> : 
+
+<div id="projectsGrid">
+{filteredProj.map((curP) =>{
 
 return <ProjectCard key= {curP.id} project = {curP}/>;
 
 })
-} </div>
+} 
+</div>
 }
 
-{/* <h1>Development Stats</h1> */}
-        </div>
+</div>  {/* close of projectsGrid */}
+
+
+</div> {/* close of mainProjectContent */}
+
+
+
+</div> 
+
     )
 }
+
+
+//         {/* <div>
+//         <h2>Currently Playing around with: </h2>
+//     {
+//         latestToolArr.map((curLT)=>{
+//             return <li>{curLT}</li>
+//         })
+//     }
+// </div> */}
