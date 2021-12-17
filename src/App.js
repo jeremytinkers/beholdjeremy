@@ -1,9 +1,10 @@
-import { BrowserRouter, Route,Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route,Routes, useParams} from 'react-router-dom';
 import './App.css';
 import HomeScreen from './HomeScreen.jsx';
 import ProjectScreen from './ProjectScreen';
 
 function App() {
+
   return (
     <BrowserRouter>
     <div id="navParent">

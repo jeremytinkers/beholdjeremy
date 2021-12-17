@@ -1,8 +1,7 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import projectData from "./data"
 import ProjectCard from "./ProjectCard"
-
-
 
 function filterProjects(tagToSearch){
 
@@ -23,7 +22,7 @@ function filterProjects(tagToSearch){
 function latestTool(){
     
     var latestToolArr = [];
-    console.log("p:" + projectData[projectData.length -1].tag)
+    // console.log("p:" + projectData[projectData.length -1].tag)
     latestToolArr = projectData[projectData.length -1].tag;
     return latestToolArr;
 }  
@@ -31,11 +30,14 @@ function latestTool(){
 
 export default function ProjectScreen(props) {
 
-    console.log("match params: " + props.match.params.id);
+    const {tag} = useParams();
+    console.log("the tag is: "+ tag);
+
+    let initialTag = tag? tag: "All";
 
     const [emptyFlag, setEmptyFlag] = useState(false);
-    const [tagToSearch, setTagToSearch] = useState("All");
-    const [filteredProj, setFilteredProj] = useState(projectData);
+    const [tagToSearch, setTagToSearch] = useState(initialTag);
+    const [filteredProj, setFilteredProj] = useState(filterProjects(tagToSearch));
     //const [latestTool, setLatestTool] = useState("php");
 
     function handleChange(e){
@@ -61,7 +63,7 @@ export default function ProjectScreen(props) {
     
     return (
         <div>
-        <h1>Project Screen behold!</h1>
+   
         <div>
         <h2>Currently Playing around with: </h2>
     {
@@ -70,7 +72,8 @@ export default function ProjectScreen(props) {
         })
     }
 </div>
-    <input type="text" onChange = {handleChange} placeholder="Enter Tools/TechStack Tag"/>
+
+    <input type="text" onChange = {handleChange} placeholder="Enter Tools/TechStack Tag" value= {tagToSearch}/>
 
     <button onClick = {submitFilterReq}>Search</button>
 

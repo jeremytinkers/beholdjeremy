@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import img from './home1.jpg'
+import {useNavigate} from 'react-router-dom';
+import img from './home1.jpg';
 
 export default function HomeScreen(props) {
-
+    let navigate = useNavigate();
     const [tagToSearch, setTagToSearch] = useState("All");
 
     function handleChange(e){
@@ -14,13 +15,11 @@ export default function HomeScreen(props) {
     }
 
     function submitSearchReq(){
-        console.log("submitsearch" + tagToSearch);
-        var tagPath = "/projectDashboard/" + tagToSearch;
-        console.log("path to search : " + tagPath);       
+        var tagPath = "/projectDashboard/" + tagToSearch; 
+        navigate(tagPath);   
     }
 
     
-
     return (
         <div>
             <div id="homeContent">
