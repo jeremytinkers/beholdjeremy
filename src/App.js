@@ -1,5 +1,6 @@
 import { BrowserRouter, Route,Routes, useParams} from 'react-router-dom';
 import './App.css';
+import ResumePdf from "./assets/Resume.pdf";
 import HomeScreen from './HomeScreen.jsx';
 import ProjectScreen from './ProjectScreen';
 
@@ -14,9 +15,10 @@ function App() {
 
             <nav>
                 <a href={"/projectDashboard"}>Projects</a>
-                <a href={"/projectDashboard"}>Github</a>
-                <a href={"/projectDashboard"}>Linkedin</a>
-                <a href={"/projectDashboard"}>Resume</a>
+                <a href={ResumePdf} download="Resume.pdf"><i class="fa fa-file fa-sm"></i></a>
+                <a class="github" href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
+                <a class="ln" href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
+                
             </nav>
 
             </div>
