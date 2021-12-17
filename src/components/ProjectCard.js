@@ -2,17 +2,17 @@ export default function ProjectCard(props) {
     return (
       
         <div className="projectCard">
-          <h1>Name: {props.project.name}</h1>  
-          <h3>Description: {props.project.descp}</h3>
-          <ul>
-          Tags
+          <h2>{props.project.name}</h2>  
+          <h4>Description: </h4>
+          <p>{props.project.descp}</p>
+          <div id="cardTags">
           {
             props.project.tag.map(curTag => {
-              return <li>{curTag}</li>;
+              return <p>{curTag}</p>;
             })
 
           } 
-          </ul> 
+          </div> 
         </div>
     )
 }

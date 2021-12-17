@@ -1,11 +1,41 @@
+
 .projectCard{
-  background-color: lightgoldenrodyellow;
+  
   border-style: solid;
   border-width: 2px;
   margin: 2em;
   width: 50vh;
   border-radius: 0.8rem;
+  padding: 1em;
 
+}
+
+.projectCard h2{
+  color: rgb(218, 63, 36);
+}
+
+.projectCard h4{
+  margin-bottom: -0.7em;
+}
+
+.projectCard p{
+  font-family:'Courier New', Courier, monospace;
+}
+#cardTags{
+  display: flex;
+  margin-top: -0.5em;
+}
+
+#cardTags p {
+  background-color: rgb(255, 224, 124);
+  font-size: 0.8em;
+  margin: 0.2em;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  border-style: solid;
+  border-width: 0.01em;
+  font-weight: 500;
+  font-family: 'Special Elite', cursive;
 }
 
 body{
@@ -21,7 +51,10 @@ flex-wrap: wrap;
 top:0.3em;
 left: 30vw;
 }
-
+ 
+#navbarHeading{
+  margin-left: -1em;  
+}
 
 
 #navbar a{
@@ -82,6 +115,16 @@ color: black;
  border: solid;
  padding: 1.5em;
  border-radius: 0.6em;
+ border-width: 0.1em;
+}
+
+.aboutMe h2{
+  color: rgb(235, 84, 73);
+}
+
+#aboutPara{
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(168, 124, 3);
 }
 
 #homeEnd{
@@ -91,6 +134,11 @@ color: black;
   
 }
 
+#homeEnd p {
+  color: green;
+  font-weight: 500;
+  font-size: 1.1em;
+}
 #homeEnd button{
   background-color: white;
   font-family: 'Special Elite', cursive;
@@ -142,3 +190,8 @@ grid-template-columns: auto;
 }
 
 
+#projectSInput{
+  background-color: rgb(255, 230, 117);
+  width: 20vw;
+  
+}

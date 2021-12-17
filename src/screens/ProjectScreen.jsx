@@ -47,7 +47,9 @@ export default function ProjectScreen(props) {
         console.log("after:"+tagToSearch);
     }
 
-    function submitFilterReq(){
+    function submitFilterReq(e){
+        
+        if(e.keyCode ===13){
         console.log("final:" + tagToSearch);
         console.log(filterProjects(tagToSearch));
         if(!filterProjects(tagToSearch).length){
@@ -57,6 +59,7 @@ export default function ProjectScreen(props) {
         }
         setFilteredProj(filterProjects(tagToSearch));
     }
+}
 
     var latestToolArr = latestTool();
     
@@ -66,11 +69,10 @@ export default function ProjectScreen(props) {
 <div>
 <div id="mainProjectContent">
 
-    <input type="text" onChange = {handleChange} placeholder="Enter Tools/TechStack Tag" value= {tagToSearch}/>
+    <p>Search for a particular skill 🔎</p>
+    <input onKeyDown={submitFilterReq} id="projectSInput" type="text" onChange = {handleChange} placeholder="Enter a Tool/TechStack Tag" value= {tagToSearch} />
 
-    <button onClick = {submitFilterReq}>Search</button>
-
-   
+      
 <div id="projectsGridParent">
 {emptyFlag? 
 <p>No matching project. :( </p> : 

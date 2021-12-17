@@ -11,7 +11,7 @@ function App() {
     <div id="navParent">
             <div id="navbar">
 
-            <h1> <a href="/">Jeremiah Thomas</a> </h1>
+            <h1 id="navbarHeading"> <a href="/">Jeremiah Thomas</a> </h1>
 
             <nav>
                 <a href={"/projectDashboard"}>Projects</a>
