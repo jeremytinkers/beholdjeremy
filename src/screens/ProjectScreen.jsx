@@ -61,6 +61,12 @@ export default function ProjectScreen(props) {
     }
 }
 
+function submitFilterReqAll(e){
+    
+    setFilteredProj(projectData);
+
+}
+
     var latestToolArr = latestTool();
     
 
@@ -72,6 +78,7 @@ export default function ProjectScreen(props) {
     <p>Search for a particular skill 🔎</p>
     <input onKeyDown={submitFilterReq} id="projectSInput" type="text" onChange = {handleChange} placeholder="Enter a Tool/TechStack Tag" value= {tagToSearch} />
 
+<button id="buttonProject" onClick={submitFilterReqAll}>View All Projects</button>
       
 <div id="projectsGridParent">
 {emptyFlag? 
