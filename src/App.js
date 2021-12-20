@@ -1,8 +1,6 @@
 import { BrowserRouter, Route,Routes, useParams} from 'react-router-dom';
 import './App.css';
 import ResumePdf from "./assets/Resume.pdf";
-import ApiTest from './screens/ApiTest';
-import apiTest from './screens/ApiTest';
 import HomeScreen from './screens/HomeScreen.jsx';
 import ProjectScreen from './screens/ProjectScreen';
 

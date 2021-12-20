@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import {fullProjectData} from "../data.js"
 import ProjectCard from "../components/ProjectCard.js"
 
 function filterProjects(tagToSearch, projectData){
@@ -11,7 +10,7 @@ function filterProjects(tagToSearch, projectData){
 
     var filteredSet = [];
     for(var i=0 ; i< projectData.length; i++){
-        if(projectData[i].topic.includes(tagToSearch.toLowerCase())){
+        if(projectData[i].topics.includes(tagToSearch.toLowerCase())){
             filteredSet.push(projectData[i]);
         }
     }
@@ -30,32 +29,11 @@ function latestTool(projectData){
 
 export default function ProjectScreen(props) {
 
-// //Request for github public repo data
-//   const [error, setError] = useState(null);
-//   const [isLoaded, setIsLoaded] = useState(false);
-//   const [publicProjectData, setPublicProjectData] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://api.github.com/users/jeremytinkers/repos")
-//       .then(res => res.json())
-//       .then(
-//         (result) => {
-//           setIsLoaded(true);
-//           setPublicProjectData(result);
-//           console.log("loaded :" + isLoaded);
-//         },
-//         (error) => {
-//           setIsLoaded(true);
-//           setError(error);
-//         }
-//       )
-//   }, [])
-
-//   const fullProjectData = privateProjectData.concat(publicProjectData);
-
+  const fullProjectData = JSON.parse(localStorage.getItem('fullProjectData'));
   console.log("fullPorjectdata in projectscreen:" + JSON.stringify(fullProjectData));
-
-    const {tag} = useParams();
+  
+  
+  const {tag} = useParams();
     // console.log("the tag is: "+ tag);
 
     let initialTag = tag? tag: "All";
@@ -96,7 +74,6 @@ function submitFilterReqAll(e){
     
 
     return (
-    
 <div>
 <div id="mainProjectContent">
 
@@ -114,9 +91,8 @@ function submitFilterReqAll(e){
 filteredProj.map((curP) =>{
 
 return <ProjectCard key= {curP.id} project = {curP}/>;
-
 })
-} 
+}
 
 </div>
 }
