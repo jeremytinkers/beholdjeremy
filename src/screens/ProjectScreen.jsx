@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import projectData from "../data.js"
+import {fullProjectData} from "../data.js"
 import ProjectCard from "../components/ProjectCard.js"
 
-function filterProjects(tagToSearch){
+function filterProjects(tagToSearch, projectData){
 
     if(tagToSearch.toLowerCase() === "all"){
         return projectData;
@@ -11,7 +11,7 @@ function filterProjects(tagToSearch){
 
     var filteredSet = [];
     for(var i=0 ; i< projectData.length; i++){
-        if(projectData[i].tag.includes(tagToSearch.toLowerCase())){
+        if(projectData[i].topic.includes(tagToSearch.toLowerCase())){
             filteredSet.push(projectData[i]);
         }
     }
@@ -19,55 +19,80 @@ function filterProjects(tagToSearch){
     return filteredSet;
 }
 
-function latestTool(){
+function latestTool(projectData){
     
     var latestToolArr = [];
     // console.log("p:" + projectData[projectData.length -1].tag)
-    latestToolArr = projectData[projectData.length -1].tag;
+    latestToolArr = projectData[projectData.length -1].topic;
     return latestToolArr;
 }  
 
 
 export default function ProjectScreen(props) {
 
+// //Request for github public repo data
+//   const [error, setError] = useState(null);
+//   const [isLoaded, setIsLoaded] = useState(false);
+//   const [publicProjectData, setPublicProjectData] = useState([]);
+
+//   useEffect(() => {
+//     fetch("https://api.github.com/users/jeremytinkers/repos")
+//       .then(res => res.json())
+//       .then(
+//         (result) => {
+//           setIsLoaded(true);
+//           setPublicProjectData(result);
+//           console.log("loaded :" + isLoaded);
+//         },
+//         (error) => {
+//           setIsLoaded(true);
+//           setError(error);
+//         }
+//       )
+//   }, [])
+
+//   const fullProjectData = privateProjectData.concat(publicProjectData);
+
+  console.log("fullPorjectdata in projectscreen:" + JSON.stringify(fullProjectData));
+
     const {tag} = useParams();
-    console.log("the tag is: "+ tag);
+    // console.log("the tag is: "+ tag);
 
     let initialTag = tag? tag: "All";
 
     const [emptyFlag, setEmptyFlag] = useState(false);
     const [tagToSearch, setTagToSearch] = useState(initialTag);
-    const [filteredProj, setFilteredProj] = useState(filterProjects(tagToSearch));
+    const [filteredProj, setFilteredProj] = useState(filterProjects(tagToSearch, fullProjectData));
     //const [latestTool, setLatestTool] = useState("php");
 
     function handleChange(e){
-        console.log(e.target.value);
-        console.log("bfore:"+tagToSearch);
+        // console.log(e.target.value);
+        // console.log("bfore:"+tagToSearch);
         setTagToSearch(e.target.value);
-        console.log("after:"+tagToSearch);
+        // console.log("after:"+tagToSearch);
     }
 
     function submitFilterReq(e){
         
         if(e.keyCode ===13){
         console.log("final:" + tagToSearch);
-        console.log(filterProjects(tagToSearch));
-        if(!filterProjects(tagToSearch).length){
+        console.log(filterProjects(tagToSearch, fullProjectData));
+        if(!filterProjects(tagToSearch, fullProjectData).length){
             setEmptyFlag(true);
         }else{
             setEmptyFlag(false);
         }
-        setFilteredProj(filterProjects(tagToSearch));
+        setFilteredProj(filterProjects(tagToSearch, fullProjectData));
     }
 }
 
 function submitFilterReqAll(e){
     
-    setFilteredProj(projectData);
+    setFilteredProj(fullProjectData);
 
 }
 
-    var latestToolArr = latestTool();
+// var latestToolArr = latestTool(fullProjectData);
     
 
     return (
@@ -85,12 +110,14 @@ function submitFilterReqAll(e){
 <p>No matching project. :( </p> : 
 
 <div id="projectsGrid">
-{filteredProj.map((curP) =>{
+{
+filteredProj.map((curP) =>{
 
 return <ProjectCard key= {curP.id} project = {curP}/>;
 
 })
 } 
+
 </div>
 }
 

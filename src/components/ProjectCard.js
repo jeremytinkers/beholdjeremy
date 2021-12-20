@@ -4,11 +4,11 @@ export default function ProjectCard(props) {
         <div className="projectCard">
           <h2>{props.project.name}</h2>  
           <h4>Description: </h4>
-          <p>{props.project.descp}</p>
+          <p>{props.project.description}</p>
           <div id="cardTags">
           {
-            props.project.tag.map(curTag => {
-              return <p>{curTag}</p>;
+            props.project.topics.map(curTopic => {
+              return <p>{curTopic}</p>;
             })
 
           } 

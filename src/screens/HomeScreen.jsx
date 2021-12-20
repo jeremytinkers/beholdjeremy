@@ -1,9 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
+import {privateProjectData, fullProjectData} from "../data.js"
 import img from '../assets/images/home1.jpg';
 import "./homeScreenStyle.css";
 
 export default function HomeScreen(props) {
+
+    //Request for github public repo data
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [publicProjectData, setPublicProjectData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/jeremytinkers/repos")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setPublicProjectData(result);
+          console.log("loaded :" + isLoaded);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }, [])
+
+
+  console.log("fullPorjectdata in home bfore:" + JSON.stringify(fullProjectData));
+  fullProjectData.push(publicProjectData[0]);
+
+  console.log("fullPorjectdata in home after:" + JSON.stringify(fullProjectData));
+//   var fullProjectData = privateProjectData.concat(publicProjectData);
+
+//console.log("fullPorjectdata in home:" + JSON.stringify(fullProjectData));
+
+
     let navigate = useNavigate();
     const [tagToSearch, setTagToSearch] = useState("All");
 
