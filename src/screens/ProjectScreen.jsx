@@ -9,6 +9,19 @@ function filterProjects(tagToSearch, projectData){
     }
 
     var filteredSet = [];
+
+    //Exception: c++ or c-plus-plus
+     if(tagToSearch.toLowerCase() === "c++" || tagToSearch.toLowerCase() === "c-plus-plus"){
+         for(var i=0 ; i< projectData.length; i++){
+            if(projectData[i].topics.includes('c-plus-plus') || projectData[i].topics.includes('c++')){
+                filteredSet.push(projectData[i]);
+            }
+        }
+        return filteredSet;
+    }
+
+
+
     for(var i=0 ; i< projectData.length; i++){
         if(projectData[i].topics.includes(tagToSearch.toLowerCase())){
             filteredSet.push(projectData[i]);
