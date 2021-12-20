@@ -28,7 +28,7 @@ export default function HomeScreen(props) {
   }, [])
 
   
-  const fullProjectData = privateProjectData.concat(publicProjectData);
+  const fullProjectData = publicProjectData.concat(privateProjectData);
   console.log("fullPorjectdata in home after:" + JSON.stringify(fullProjectData));
 
  

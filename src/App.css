@@ -1,14 +1,10 @@
 
 .projectCard{
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
   border-style: solid;
   border-width: 2px;
-  margin: 2em;
-  width: 50vh;
+  margin: 1.7em;
+  width: 80vh;
   border-radius: 0.8rem;
   padding: 1em;
   font-size: 1em;
@@ -16,6 +12,7 @@
 }
 
 .projectCard h2{
+  font-size: 1.2em;
   color: rgb(218, 63, 36);
 }
 
@@ -174,21 +171,21 @@ color: black;
 
 #projectsGrid{
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
 }
 
 @media (max-width:1060px) {
   
   #projectsGrid{
-grid-template-columns: auto auto;
+grid-template-columns: auto;
   }
 }
-@media (max-width:700px) {
+/* @media (max-width:700px) {
   
   #projectsGrid{
 grid-template-columns: auto;
   }
-}
+} */
 #projectsGridParent{
   display: flex;
   justify-content: center;
