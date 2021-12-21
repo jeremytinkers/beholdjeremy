@@ -1,7 +1,7 @@
 const privateProjectData = [
 
 {
-    id : 1,
+    id : 330475743,
     name : "NoteHub",
     domain: [ "web dev", "dbms"],
     topics: ["php", "mysql" , "bootstrap"],
@@ -10,7 +10,7 @@ const privateProjectData = [
 },
 
 {
-    id : 2,
+    id : 330475742,
     name : "binUp - Google Dev Challenge",
     domain: [ "app dev"],
     topics: ["flutter","dart"],
@@ -18,7 +18,7 @@ const privateProjectData = [
 },
 
 {
-    id : 3,
+    id : 330475742,
     name : "coffeeReads MVP1",
     domain: [ "startup", "web dev"],
     topics: ["react"],
@@ -28,7 +28,7 @@ const privateProjectData = [
     id : 4,
     name : "Breakout Replica",
     domain: [ "game dev"],
-    topics: ["canvas api"],
+    topics: ["canvas api","html-css-javascript"],
     description : "A replica of the Breakout game, built from scratch to begin and delve into development with the Canvas API" 
 } 
 

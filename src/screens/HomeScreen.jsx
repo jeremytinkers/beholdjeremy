@@ -28,13 +28,14 @@ export default function HomeScreen(props) {
   }, [])
 
   
+  
   const fullProjectData = publicProjectData.concat(privateProjectData);
+  fullProjectData.sort((a, b) => (a.id > b.id) ? -1 : 1);
   console.log("fullPorjectdata in home after:" + JSON.stringify(fullProjectData));
 
  
   localStorage.setItem("fullProjectData", JSON.stringify(fullProjectData));
   
-
     let navigate = useNavigate();
     const [tagToSearch, setTagToSearch] = useState("All");
 

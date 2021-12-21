@@ -3,6 +3,7 @@ import './App.css';
 import ResumePdf from "./assets/Resume.pdf";
 import HomeScreen from './screens/HomeScreen.jsx';
 import ProjectScreen from './screens/ProjectScreen';
+import Test from './screens/Test';
 
 function App() {
 
@@ -34,10 +35,15 @@ function App() {
 
 
   </BrowserRouter>
+
   );
 }
 
 export default App;
+
+  // <div>
+  //   <Test/>
+  // </div>
 
 
 
