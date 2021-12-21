@@ -57,8 +57,8 @@ export default function HomeScreen(props) {
         <div>
             <div id="homeContent">
 
-            <img class="homeImage" src= {img} alt= {"Jeremy Picture"} /> 
-            <div class="aboutMe">
+            <img className="homeImage" src= {img} alt= {"Jeremy Picture"} /> 
+            <div className="aboutMe">
             <h2>About Me <span>🇴🇲 🇮🇳</span></h2>
             <div id="aboutPara">
             <p> Born and bred in <strong>Muscat</strong> dunes, behold another culturally bewildered <strong>Malayali</strong>!</p>
@@ -81,7 +81,7 @@ export default function HomeScreen(props) {
           <form action={"/projectDashboard/" + tagToSearch}>
 	        <label for="search">Search</label>
 	        <input onChange={handleChange} id="search" type="text" placeholder='Ex: C++, Dart' required/>
-	        <span class="caret"></span>
+	        <span className="caret"></span>
             </form>
 
             </div>

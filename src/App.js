@@ -17,9 +17,9 @@ function App() {
             <nav>
                 <a href={"/projectDashboard"}>Projects</a>
                 <a href={ResumePdf} download="Resume.pdf"><i class="fa fa-file fa-sm"></i></a>
-                <a class="github" href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
-                {/* <a class="focusmate" href={"https://www.focusmate.com/i/KwVqDUrm9H/calendar"} target={"_blank"}>F</a> */}
-                <a class="ln" href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
+                <a className="github" href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
+                {/* <a className="focusmate" href={"https://www.focusmate.com/i/KwVqDUrm9H/calendar"} target={"_blank"}>F</a> */}
+                <a className="ln" href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
                 
                 
             </nav>
