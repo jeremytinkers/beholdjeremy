@@ -12,7 +12,7 @@ function filterProjects(tagToSearch, projectData){
 
     //Exception: c++ or c-plus-plus
      if(tagToSearch.toLowerCase() === "c++" || tagToSearch.toLowerCase() === "c-plus-plus"){
-         for(var i=0 ; i< projectData.length; i++){
+         for(let i=0 ; i< projectData.length; i++){
             if(projectData[i].topics.includes('c-plus-plus') || projectData[i].topics.includes('c++')){
                 filteredSet.push(projectData[i]);
             }
@@ -20,9 +20,7 @@ function filterProjects(tagToSearch, projectData){
         return filteredSet;
     }
 
-
-
-    for(var i=0 ; i< projectData.length; i++){
+    for(let i=0 ; i< projectData.length; i++){
         if(projectData[i].topics.includes(tagToSearch.toLowerCase())){
             filteredSet.push(projectData[i]);
         }
@@ -42,11 +40,11 @@ function latestTool(projectData){
 
 export default function ProjectScreen(props) {
 
-  const fullProjectData = JSON.parse(localStorage.getItem('fullProjectData'));
-  console.log("fullPorjectdata in projectscreen:" + JSON.stringify(fullProjectData));
+   const fullProjectData = JSON.parse(localStorage.getItem('fullProjectData'));
+//   console.log("fullPorjectdata in projectscreen:" + JSON.stringify(fullProjectData));
   
   
-  const {tag} = useParams();
+   const {tag} = useParams();
     // console.log("the tag is: "+ tag);
 
     let initialTag = tag? tag: "All";
@@ -67,19 +65,21 @@ export default function ProjectScreen(props) {
         
         if(e.keyCode ===13){
         console.log("final:" + tagToSearch);
-        console.log(filterProjects(tagToSearch, fullProjectData));
+        
         if(!filterProjects(tagToSearch, fullProjectData).length){
             setEmptyFlag(true);
         }else{
             setEmptyFlag(false);
         }
         setFilteredProj(filterProjects(tagToSearch, fullProjectData));
+        console.log(filteredProj);
     }
 }
 
 function submitFilterReqAll(e){
     
     setFilteredProj(fullProjectData);
+    console.log(filteredProj);
 
 }
 

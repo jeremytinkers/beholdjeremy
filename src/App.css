@@ -89,6 +89,15 @@ text-decoration: none;
 color: black;
 }
 
+/* #navbar .focusmate{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(16, 16, 17);
+font-weight: 900;
+font-size: 1.4em;
+padding:0em;
+margin-top: 2em;
+} */
+
 #navbar a:hover{
  
   color: rgb(248, 194, 18);
@@ -140,17 +149,44 @@ color: black;
  font-style: bold;
  border: solid;
  padding: 1.5em;
+ padding-bottom: 0.8em;
  border-radius: 0.6em;
  border-width: 0.1em;
+ margin-top: 1.3em;
+ 
 }
 
 .aboutMe h2{
   color: rgb(235, 84, 73);
+ 
+}
+.aboutMe h2 span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: rgb(63, 63, 63);
 }
 
 #aboutPara{
-  font-family: 'Courier New', Courier, monospace;
-  color: rgb(168, 124, 3);
+  font-family: 'Courier Prime', Courier, monospace;
+  color: rgb(161, 118, 0);
+  font-size: 1em;
+}
+
+#aboutPara strong{
+  color: rgb(77, 77, 77);
+  font-weight: 600;
+}
+
+#aboutPara a{
+  text-decoration: none;
+  color: rgb(122, 52, 52);
+
+}
+
+#aboutPara p {
+  margin-top:0em;
+  margin-bottom:0.7em;
 }
 
 #homeEnd{

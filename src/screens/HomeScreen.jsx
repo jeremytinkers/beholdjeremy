@@ -28,7 +28,6 @@ export default function HomeScreen(props) {
   }, [])
 
   
-  
   const fullProjectData = publicProjectData.concat(privateProjectData);
   fullProjectData.sort((a, b) => (a.id > b.id) ? -1 : 1);
   console.log("fullPorjectdata in home after:" + JSON.stringify(fullProjectData));
@@ -60,12 +59,18 @@ export default function HomeScreen(props) {
 
             <img class="homeImage" src= {img} alt= {"Jeremy Picture"} /> 
             <div class="aboutMe">
-            <h2>About Me</h2>
-            <p id="aboutPara">
-            As a designer myself, I think we can play a 
-            significant role in transforming people’s minds by understanding the target audience and appropriately make effective use of media so that
-            the audience will understand the need of social distancing. 
-            </p>
+            <h2>About Me <span>🇴🇲 🇮🇳</span></h2>
+            <div id="aboutPara">
+            <p> Born and bred in <strong>Muscat</strong> dunes, behold another culturally bewildered <strong>Malayali</strong>!</p>
+           
+           <p>I like to be called Jeremy and am currently a <strong>3rd year CS Undergrad</strong> at <a href="https://www.nitt.edu/" target="_blank"><strong>NIT-T</strong></a>  with a deep passion for 
+            building products with the user in focus.</p>
+
+            {/* <p>In addition, startups, tech, stocks and marketing get my adrenaline pumping!</p> */}
+            
+            <p>I'm currently on the lookout for <strong>internships</strong> in the <strong>SWE/PM</strong> space(preferably startups)</p>
+            
+            </div>
             </div>
             
             </div>
@@ -73,7 +78,7 @@ export default function HomeScreen(props) {
           
             <p> Looking for expertise in a particular skill?</p>
                        
-            <form action={"/projectDashboard/" + tagToSearch}>
+          <form action={"/projectDashboard/" + tagToSearch}>
 	        <label for="search">Search</label>
 	        <input onChange={handleChange} id="search" type="text" placeholder='Ex: C++, Dart' required/>
 	        <span class="caret"></span>
