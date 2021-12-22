@@ -29,13 +29,12 @@ function filterProjects(tagToSearch, projectData){
     return filteredSet;
 }
 
-function latestTool(projectData){
-    
-    var latestToolArr = [];
-    // console.log("p:" + projectData[projectData.length -1].tag)
-    latestToolArr = projectData[projectData.length -1].topic;
-    return latestToolArr;
-}  
+// function latestTool(projectData){
+//     var latestToolArr = [];
+//     // console.log("p:" + projectData[projectData.length -1].tag)
+//     latestToolArr = projectData[projectData.length -1].topic;
+//     return latestToolArr;
+// }  
 
 
 export default function ProjectScreen(props) {
@@ -49,7 +48,9 @@ export default function ProjectScreen(props) {
 
     let initialTag = tag? tag: "All";
 
-    const [emptyFlag, setEmptyFlag] = useState(false);
+    let initialEmptyFlag = filterProjects(initialTag.toLowerCase() , fullProjectData).length ? false : true;
+
+    const [emptyFlag, setEmptyFlag] = useState(initialEmptyFlag);
     const [tagToSearch, setTagToSearch] = useState(initialTag);
     const [filteredProj, setFilteredProj] = useState(filterProjects(tagToSearch, fullProjectData));
     //const [latestTool, setLatestTool] = useState("php");
@@ -63,32 +64,34 @@ export default function ProjectScreen(props) {
 
     function submitFilterReq(e){
         
-        if(e.keyCode ===13){
-        console.log("final:" + tagToSearch);
-        
+        if(e.keyCode ===13){       
         if(!filterProjects(tagToSearch, fullProjectData).length){
             setEmptyFlag(true);
         }else{
             setEmptyFlag(false);
         }
         setFilteredProj(filterProjects(tagToSearch, fullProjectData));
-        console.log(filteredProj);
+        
     }
 }
 
 function submitFilterReqAll(e){
     
     setFilteredProj(fullProjectData);
-    console.log(filteredProj);
+    setEmptyFlag(false);   
 
 }
 
 // var latestToolArr = latestTool(fullProjectData);
-    
+// function clickProjectCard(){
+
+//     console.log("clicked project card");
+
+// }    
 
     return (
 <div>
-<div id="mainProjectContent">
+<div id="mainProjectContent" >
 
     <p>Search for a particular skill 🔎</p>
     <input onKeyDown={submitFilterReq} id="projectSInput" type="text" onChange = {handleChange} placeholder="Enter a Tool/TechStack Tag" value= {tagToSearch} />
@@ -102,8 +105,7 @@ function submitFilterReqAll(e){
 <div id="projectsGrid">
 {
 filteredProj.map((curP) =>{
-
-return <ProjectCard key= {curP.id} project = {curP}/>;
+return <ProjectCard  key= {curP.id} project = {curP}/>;
 })
 }
 

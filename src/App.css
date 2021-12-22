@@ -1,5 +1,4 @@
 
-
 .projectCard{
 
   border-style: solid;
@@ -35,9 +34,7 @@
 
 .projectCard:hover{
   background-color: rgb(252, 231, 164);
-  cursor: pointer;
-
-}
+  }
 
 
 .projectCard h4{
