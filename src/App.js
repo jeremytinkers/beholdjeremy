@@ -23,7 +23,7 @@ function App() {
                 </div>
                 
                 <a href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
-                <a href={"https://www.focusmate.com/i/KwVqDUrm9H/calendar"} target={"_blank"}><i class="fa fa-whatsapp fa-lg"></i></a>
+                <a href={"https://wa.me/917306266838"} target={"_blank"}><i class="fa fa-whatsapp fa-lg"></i></a>
                 
                 <a href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
                 
