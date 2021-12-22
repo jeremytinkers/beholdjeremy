@@ -1,6 +1,4 @@
-
-.projectCard{
-
+.projectCard {
   border-style: solid;
   border-width: 2px;
   margin: 1.7em;
@@ -8,43 +6,39 @@
   border-radius: 0.8rem;
   padding: 1em;
   font-size: 1em;
-
 }
 
-.projectCard h2{
+.projectCard h2 {
   font-size: 1.2em;
   color: rgb(218, 63, 36);
 }
 
-
-
-.projectCard h2 i{
+.projectCard h2 i {
   color: rgb(0, 0, 0);
 }
 
-.projectCard #projectLink{
+.projectCard #projectLink {
   color: rgb(10, 148, 22);
 }
 
-.projectCard h2 i:hover{
+.projectCard h2 i:hover {
   color: rgb(0, 0, 0);
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.projectCard:hover{
+.projectCard:hover {
   background-color: rgb(252, 231, 164);
-  }
+}
 
-
-.projectCard h4{
+.projectCard h4 {
   margin-bottom: -0.7em;
 }
 
-.projectCard p{
-  font-family:'Courier New', Courier, monospace;
+.projectCard p {
+  font-family: "Courier New", Courier, monospace;
 }
-#cardTags{
+#cardTags {
   display: flex;
   flex-wrap: wrap;
   margin-top: -0.5em;
@@ -59,40 +53,36 @@
   border-style: solid;
   border-width: 0.01em;
   font-weight: 500;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
 }
 
-body{
-  font-family: 'Special Elite', cursive;
+body {
+  font-family: "Special Elite", cursive;
 }
 
-#navbar{
-display:flex;
-align-items: center;
-justify-content: space-around;
-flex-wrap: wrap;
-/* position: fixed; */
-top:0.3em;
-left: 30vw;
-}
- 
-#navbarHeading{
-  margin-left: -1em;  
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* position: fixed; */
+  top: 0.3em;
+  left: 30vw;
 }
 
-
-#navbar a{
-padding: 0.2em;
-text-decoration: none;
-color: black;
+#navbarHeading {
+  margin-left: -1em;
 }
 
-#navbar a:hover{
- 
+#navbar a {
+  padding: 0.2em;
+  text-decoration: none;
+  color: black;
+}
+
+#navbar a:hover {
   color: rgb(248, 194, 18);
 }
-
-
 
 .tooltip {
   position: relative;
@@ -133,7 +123,7 @@ color: black;
 .tooltipCard {
   position: relative;
   display: inline-block;
-  border-bottom: 1px  black;
+  border-bottom: 1px black;
 }
 
 .tooltipCard .tooltipCardtext {
@@ -152,7 +142,7 @@ color: black;
   margin-left: -60px;
 }
 
-#cok .tooltipCard .tooltipCardtext{
+#cok .tooltipCard .tooltipCardtext {
   font-size: 1em;
 }
 
@@ -171,7 +161,6 @@ color: black;
   visibility: visible;
 }
 
-
 /* #navbar .focusmate{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: rgb(16, 16, 17);
@@ -181,18 +170,15 @@ padding:0em;
 margin-top: 2em;
 } */
 
-
-
-#homeContent{
+#homeContent {
   display: flex;
-  
+
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 
-.homeImage{
+.homeImage {
   background-color: brown;
   transform: scale(0.4);
   margin-top: -14em;
@@ -204,7 +190,6 @@ margin-top: 2em;
   margin-bottom: -14em;
   animation: imageAnimation;
   animation-duration: 2s;
-  
 }
 
 /* @keyframes imageAnimation{
@@ -217,67 +202,63 @@ margin-top: 2em;
 }
  */
 
-.aboutMe{
- width: 30vw;
- font-weight: 500;
- font-style: bold;
- border: solid;
- padding: 1.5em;
- padding-bottom: 0.8em;
- border-radius: 0.6em;
- border-width: 0.1em;
- margin-top: 1.3em;
- 
+.aboutMe {
+  width: 30vw;
+  font-weight: 500;
+  font-style: bold;
+  border: solid;
+  padding: 1.5em;
+  padding-bottom: 0.8em;
+  border-radius: 0.6em;
+  border-width: 0.1em;
+  margin-top: 1.1em;
 }
 
-.aboutMe h2{
+.aboutMe h2 {
   color: rgb(235, 84, 73);
- 
 }
-.aboutMe h2 span{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.aboutMe h2 span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.7em;
   font-weight: 300;
   color: rgb(63, 63, 63);
 }
 
-#aboutPara{
-  font-family: 'Courier Prime', Courier, monospace;
+#aboutPara {
+  font-family: "Courier Prime", Courier, monospace;
   color: rgb(161, 118, 0);
   font-size: 1em;
 }
 
-#aboutPara strong{
+#aboutPara strong {
   color: rgb(77, 77, 77);
   font-weight: 600;
 }
 
-#aboutPara #mct{
+#aboutPara #mct {
   font-size: 1.3em;
 }
 
-#aboutPara #cok{
+#aboutPara #cok {
   font-size: 1em;
   text-decoration: none;
   color: rgb(77, 77, 77);
 }
 
-#aboutPara a{
+#aboutPara a {
   text-decoration: none;
   color: rgb(77, 77, 77);
-
 }
 
 #aboutPara p {
-  margin-top:0em;
-  margin-bottom:0.7em;
+  margin-top: 0em;
+  margin-bottom: 0.7em;
 }
 
-#homeEnd{
+#homeEnd {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 
 #homeEnd p {
@@ -285,60 +266,53 @@ margin-top: 2em;
   font-weight: 500;
   font-size: 1.1em;
 }
-#buttonProject{
+#buttonProject {
   margin-top: 1em;
   background-color: white;
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   font-size: 1em;
-  padding:0.3em;
+  padding: 0.3em;
   border-radius: 0.3em;
   border: solid;
   border-color: rgb(231, 183, 24);
   cursor: pointer;
 }
 
-#buttonProject:hover{
+#buttonProject:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(231, 183, 24);
   border-color: black;
   /* transform: translateY(-0.2em); */
 }
 
-#mainProjectContent{
-
+#mainProjectContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
 }
 
-#projectsGrid{
+#projectsGrid {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-@media (max-width:1060px) {
-  
-  #projectsGrid{
-grid-template-columns: auto;
+@media (max-width: 1060px) {
+  #projectsGrid {
+    grid-template-columns: auto;
   }
 }
 /* @media (max-width:700px) {
   
-  #projectsGrid{
+#projectsGrid{
 grid-template-columns: auto;
   }
 } */
-#projectsGridParent{
+#projectsGridParent {
   display: flex;
   justify-content: center;
-  
 }
 
-
-#projectSInput{
+#projectSInput {
   background-color: rgb(255, 230, 117);
   width: 20vw;
-  
 }
