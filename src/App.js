@@ -21,9 +21,11 @@ function App() {
                 <div class="tooltip"><a href={ResumePdf} download="Resume.pdf"><i class="fa fa-file fa-sm"></i></a>
                 <span class="tooltiptext">Resume</span>
                 </div>
-                <a className="github" href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
-                {/* <a className="focusmate" href={"https://www.focusmate.com/i/KwVqDUrm9H/calendar"} target={"_blank"}>F</a> */}
-                <a className="ln" href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
+                
+                <a href={"https://github.com/jeremytinkers"} target={"_blank"}><i class="fa fa-github fa-lg"></i></a>
+                <a href={"https://www.focusmate.com/i/KwVqDUrm9H/calendar"} target={"_blank"}><i class="fa fa-whatsapp fa-lg"></i></a>
+                
+                <a href={"https://www.linkedin.com/in/jeremiahthomas14/"} target={"_blank"}><i class="fa fa-linkedin fa-lg"></i></a>
                 
                 
             </nav>
