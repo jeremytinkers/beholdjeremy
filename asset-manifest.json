@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/beholdjeremy/static/css/main.b98ed926.chunk.css",
-    "main.js": "/beholdjeremy/static/js/main.17e43140.chunk.js",
-    "main.js.map": "/beholdjeremy/static/js/main.17e43140.chunk.js.map",
+    "main.js": "/beholdjeremy/static/js/main.a714aad0.chunk.js",
+    "main.js.map": "/beholdjeremy/static/js/main.a714aad0.chunk.js.map",
     "runtime-main.js": "/beholdjeremy/static/js/runtime-main.4d7b7e3b.js",
     "runtime-main.js.map": "/beholdjeremy/static/js/runtime-main.4d7b7e3b.js.map",
-    "static/js/2.31377f67.chunk.js": "/beholdjeremy/static/js/2.31377f67.chunk.js",
-    "static/js/2.31377f67.chunk.js.map": "/beholdjeremy/static/js/2.31377f67.chunk.js.map",
+    "static/js/2.9becaa46.chunk.js": "/beholdjeremy/static/js/2.9becaa46.chunk.js",
+    "static/js/2.9becaa46.chunk.js.map": "/beholdjeremy/static/js/2.9becaa46.chunk.js.map",
     "static/js/3.fdd535e9.chunk.js": "/beholdjeremy/static/js/3.fdd535e9.chunk.js",
     "static/js/3.fdd535e9.chunk.js.map": "/beholdjeremy/static/js/3.fdd535e9.chunk.js.map",
     "index.html": "/beholdjeremy/index.html",
     "static/css/main.b98ed926.chunk.css.map": "/beholdjeremy/static/css/main.b98ed926.chunk.css.map",
-    "static/js/2.31377f67.chunk.js.LICENSE.txt": "/beholdjeremy/static/js/2.31377f67.chunk.js.LICENSE.txt",
+    "static/js/2.9becaa46.chunk.js.LICENSE.txt": "/beholdjeremy/static/js/2.9becaa46.chunk.js.LICENSE.txt",
     "static/media/Resume.999b3454.pdf": "/beholdjeremy/static/media/Resume.999b3454.pdf",
     "static/media/home1.c46d561d.jpg": "/beholdjeremy/static/media/home1.c46d561d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4d7b7e3b.js",
-    "static/js/2.31377f67.chunk.js",
+    "static/js/2.9becaa46.chunk.js",
     "static/css/main.b98ed926.chunk.css",
-    "static/js/main.17e43140.chunk.js"
+    "static/js/main.a714aad0.chunk.js"
   ]
 }
